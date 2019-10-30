@@ -10,17 +10,43 @@ import com.blankj.utilcode.util.ObjectUtils
  */
 
 /**
+ * @author         yanjie
+ * @date           2019-10-23 17:23
+ * @version        1.0
+ * @description
+ */
+
+/**
+ * 判断对象是否为空
+ */
+fun Any?.isEmpty(): Boolean {
+    return ObjectUtils.isEmpty(this)
+}
+
+/**
+ * 判断对象是否为空
+ */
+fun Any?.isNotEmpty(): Boolean {
+    return ObjectUtils.isNotEmpty(this)
+}
+
+/**
  * 判断对象为空
  */
-fun Any?.isEmpyt(){
-    ObjectUtils.isEmpty(this)
+inline fun <T> T.isEmpty(block: T.() -> Unit): T {
+    if (ObjectUtils.isEmpty(this)) {
+        block()
+    }
+    return this
 }
 
 
 /**
  * 判断对象不为空
  */
-fun Any?.isNotEmpyt(){
-    ObjectUtils.isNotEmpty(this)
+inline fun <T> T.isNotEmpty(block: T.() -> Unit): T {
+    if (ObjectUtils.isNotEmpty(this)) {
+        block()
+    }
+    return this
 }
-

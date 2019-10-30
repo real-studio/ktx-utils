@@ -2,7 +2,6 @@ package org.realstudio.library.view
 
 import android.view.View
 
-
 /**
  * @author         yanjie
  * @date           2019-10-28 00:00
