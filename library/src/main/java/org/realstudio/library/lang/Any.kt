@@ -19,14 +19,14 @@ import com.blankj.utilcode.util.ObjectUtils
 /**
  * 判断对象是否为空
  */
-fun Any?.isEmpty(): Boolean {
+fun <T> T.isEmpty(): Boolean {
     return ObjectUtils.isEmpty(this)
 }
 
 /**
  * 判断对象是否为空
  */
-fun Any?.isNotEmpty(): Boolean {
+fun <T> T.isNotEmpty(): Boolean {
     return ObjectUtils.isNotEmpty(this)
 }
 
